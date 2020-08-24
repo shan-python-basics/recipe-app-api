@@ -6,7 +6,7 @@ class ModelTests(TestCase):
     def test_create_user_with_email_successful(self):
         """Test creating a new user with an email is successful"""
 
-        email = "deshan5255@gmail.com"
+        email = "test1234@gmail.com"
         password = 'test1234'
 
         user = get_user_model().objects.create_user(
@@ -20,7 +20,7 @@ class ModelTests(TestCase):
     def test_new_user_email_normalized(self):
         """Test the email for a new user is normalized"""
 
-        email = "deshan5255@GMAIL.COM"
+        email = "test1234@gmail.com"
         password = 'test1234'
 
         user = get_user_model().objects.create_user(email, password)
@@ -35,7 +35,7 @@ class ModelTests(TestCase):
     def test_create_new_super_user(self):
         """Test creating a new superuser"""
         user = get_user_model().objects.create_superuser(
-            'deshan5255@gmail.com',
+            'test1234@gmail.com',
             'test1234'
         )
 
